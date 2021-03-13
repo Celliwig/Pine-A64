@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+// Copyright (c) 2018 ARM Ltd.
+
+#include "sun50i-a64-sopine-baseboard.dts"
+
+/ {
+	model = "Pine64 LTS";
+	compatible = "pine64,pine64-lts", "allwinner,sun50i-r18",
+		     "allwinner,sun50i-a64";
+
+	leds {
+		compatible = "gpio-leds";
+
+		wan1-link {
+			label = "green:wan1";
+			gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+
+		wan2-link {
+			label = "green:wan2";
+			gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+
+		lan-link {
+			label = "green:lan";
+			gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+
+		wan1-act {
+			label = "yellow:wan1";
+			gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+
+		wan2-act {
+			label = "yellow:wan2";
+			gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+
+		lan-act {
+			label = "yellow:lan";
+			gpios = <&gpio1 4 GPIO_ACTIVE_HIGH>;
+			//linux,default-trigger = "heartbeat";
+		};
+	};
+};
