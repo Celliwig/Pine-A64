@@ -1,0 +1,11 @@
+Power:	PL7
+
+Link:
+	WAN1: PB2
+	WAN2: PB3
+	LAN: PB4
+
+Activity:
+	WAN1: PB5
+	WAN2: PB6
+	LAN: PB7
